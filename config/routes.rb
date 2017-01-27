@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   #get 'movies/create'
 
-  post 'movie' => 'movies#create'
+  post 'movies' => 'movies#create'
 
   get 'movies/:id/edit' => "movies#edit"
 
