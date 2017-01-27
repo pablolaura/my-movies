@@ -1890,3 +1890,101 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 82ms (Views: 75.8ms | ActiveRecord: 4.2ms)
 
 
+Started GET "/movies/1/edit" for ::1 at 2017-01-27 19:15:12 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (4.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (4.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/_form.html.erb (54.3ms)
+  Rendered movies/edit.html.erb within layouts/application (74.5ms)
+Completed 200 OK in 1954ms (Views: 1870.2ms | ActiveRecord: 24.0ms)
+
+
+Started PUT "/movies/1" for ::1 at 2017-01-27 19:15:48 -0200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Bc8ZXgGmL/GGZkIFI9QwuqHpuk62QjITdp24tcDWUMmqUll7RtfSnbjm7sd8fknNPHkviNDHiX/zGUH5OkDzg==", "movie"=>{"title"=>"Alladin", "release_date(3i)"=>"25", "release_date(2i)"=>"11", "release_date(1i)"=>"1993", "description"=>"aaaaazzzz"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (13.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (26.3ms)[0m  [1m[33mUPDATE "movies" SET "description" = ?, "release_date" = ?, "updated_at" = ? WHERE "movies"."id" = ?[0m  [["description", "aaaaazzzz"], ["release_date", 1993-11-25 00:00:00 UTC], ["updated_at", 2017-01-27 21:15:48 UTC], ["id", 1]]
+  [1m[35m (41.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 89ms (ActiveRecord: 81.8ms)
+
+
+Started GET "/movies/1" for ::1 at 2017-01-27 19:15:48 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (5.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1182ms (Views: 1147.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/movies" for ::1 at 2017-01-27 19:15:55 -0200
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (4.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 247ms (Views: 206.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2017-01-27 19:15:57 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (4.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 138ms (Views: 131.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/movies/1/edit" for ::1 at 2017-01-27 19:16:05 -0200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (3.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/_form.html.erb (3.4ms)
+  Rendered movies/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 93ms (Views: 87.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/movies/4/edit" for ::1 at 2017-01-27 19:16:24 -0200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (4.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/_form.html.erb (3.7ms)
+  Rendered movies/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 295ms (Views: 288.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/movies/4/edit" for ::1 at 2017-01-27 19:23:49 -0200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (4.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/_form.html.erb (22.5ms)
+  Rendered movies/edit.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 283ms (Views: 177.9ms | ActiveRecord: 94.2ms)
+
+
+Started GET "/movies" for ::1 at 2017-01-27 19:23:58 -0200
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (12.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 461ms (Views: 445.4ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/movies/4/edit" for ::1 at 2017-01-27 19:24:09 -0200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (5.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/_form.html.erb (2.8ms)
+  Rendered movies/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 123ms (Views: 115.4ms | ActiveRecord: 5.7ms)
+
+
